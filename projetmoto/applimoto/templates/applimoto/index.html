@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>Bienvenue sur le site des écuries</h1>
+<a href="/applimoto/ajout">Ajouter une ecurie</a>
+<a href="/applimoto/inscrire">Inscrire un pilote</a>
+<ol>
+    {% for l in liste %}
+    <li>{{l}} <a href="/applimoto/affiche/{{l.id}}">Afficher </a> <a href="/applimoto/update/{{l.id}}">Modifier </a> <a
+            href="/applimoto/delete/{{l.id}}">Supprimer </a></li>
+    {% endfor %}
+</ol>
+<ol>
+    {% for l2 in liste2 %}
+    <li>{{l2}} <a href="/applimoto/affichepilote/{{l2.id}}">Afficher </a> <a href="/applimoto/updatepilote/{{l2.id}}">Modifier </a>
+        <a href="/applimoto/deletepilote/{{l2.id}}">Désinscrire le pilote </a></li>
+    {% endfor %}
+
+</ol>
+</body>
+</html>
