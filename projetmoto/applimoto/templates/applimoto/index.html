@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
-<h1>Bienvenue sur le site des écuries</h1>
-<a href="/applimoto/ajout">Ajouter une ecurie</a>
-<a href="/applimoto/inscrire">Inscrire un pilote</a>
+{% extends "applimoto/main.html" %}
+
+{% block title %}
+    Page d'accueil du site
+{% endblock %}
+{%block content %}
 <ol>
     {% for l in liste %}
     <li>{{l}} <a href="/applimoto/affiche/{{l.id}}">Afficher </a> <a href="/applimoto/update/{{l.id}}">Modifier </a> <a
@@ -21,5 +17,4 @@
     {% endfor %}
 
 </ol>
-</body>
-</html>
+{% endblock %}

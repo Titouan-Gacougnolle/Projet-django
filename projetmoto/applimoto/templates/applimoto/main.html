@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'applimoto/main.css' %}">
+    <title>{% block title %}Mon Projet Django{% endblock %}</title>
+</head>
+<body>
+<header class="entetesite">
+            <h1> Bienvnue sur notre site de gestion officiel du MotoGP</h1>
+            <nav>
+                <a href="http://127.0.0.1:8000/applimoto/index/"> Accueil </a>
+                <a href="/applimoto/ajout">Ajouter une ecurie</a>
+                <a href="/applimoto/inscrire">Inscrire un pilote</a>
+            </nav>
+        </header>
+
+<div class="main">
+        {% block content %}
+            <h1> bloc de test
+            </h1>
+        {% endblock%}
+        </div>
+</body>
+</html>

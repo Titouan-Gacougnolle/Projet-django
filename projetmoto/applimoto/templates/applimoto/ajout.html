@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title> Ajout</title>
-</head>
-<body>
+{% extends "applimoto/main.html" %}
+
+{% block title %}
+    Ajouter
+{% endblock %}
+{%block content %}
 <h1>Ajouter des écuries</h1>
 
 {% if id != '' %}
@@ -20,5 +19,4 @@
         <a href="/applimoto/">Index</a>
 
     </form>
-</body>
-</html>
+{% endblock %}

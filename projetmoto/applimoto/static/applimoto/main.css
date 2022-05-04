@@ -1,0 +1,28 @@
+body {
+    margin: auto;
+    background-color: chartreuse;
+}
+
+.entetesite{
+    width: 70%;
+    margin: auto;
+}
+.entetesite h1 {
+    color : red;
+   width : 100%;
+   text-align: center;
+   background-color: antiquewhite;
+   margin : 0px auto 0px;
+}
+
+.entetesite > nav > a {
+    color: forestgreen;
+    background-color: burlywood;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.main {
+    width: 70%;
+    margin: auto;
+}

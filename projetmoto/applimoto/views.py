@@ -5,6 +5,12 @@ from . import models
 
 # Create your views here.
 
+
+def main(request):
+    return render(request, 'applimoto/main.html')
+
+
+
 def index(request):
     liste = list(models.Ecurie.objects.all())
     liste2 = list(models.Pilote.objects.all())
