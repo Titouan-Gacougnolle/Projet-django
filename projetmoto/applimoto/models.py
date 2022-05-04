@@ -18,15 +18,15 @@ class Ecurie(models.Model):
 
 
 class Pilote(models.Model):
-    nom_pilote = models.CharField(max_length=20)
+    nom = models.CharField(max_length=20)
     prenom = models.CharField(max_length=20)
     age = models.IntegerField(blank=False)
 
     #ecurie = models.ForeignKey(Ecurie, default=None)
 
     def __str__(self):
-        textepilote = f"Voici le pilote {self.nom_pilote} {self.prenom}"
+        textepilote = f"Voici le pilote {self.nom} {self.prenom}"
         return textepilote
 
     def dico(self):
-        return {'nom': self.nom_pilote, 'prenom': self.prenom, 'age': self.age}
+        return {'nom': self.nom, 'prenom': self.prenom, 'age': self.age}
