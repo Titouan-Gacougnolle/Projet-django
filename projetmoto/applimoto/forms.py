@@ -20,9 +20,10 @@ class PiloteForm(ModelForm):
     class Meta:
         model = models.Pilote
 
-        fields = {'nom', 'prenom', 'age',}
+        fields = {'nom', 'prenom', 'age', 'ecurie',}
         labels = {
             'nom': _('Nom'),
             'prenom': _('Prenom'),
             'age': _('Age'),
+            'ecurie': _('Ecurie'),
         }
