@@ -1,11 +1,13 @@
 body {
     margin: auto;
-    background-color: chartreuse;
+    background-color: aliceblue;
 }
 
 .entetesite{
     width: 70%;
     margin: auto;
+
+    height: 200px;
 }
 .entetesite h1 {
     color : red;
@@ -25,4 +27,9 @@ body {
 .main {
     width: 70%;
     margin: auto;
+     background-color: navajowhite;
+}
+
+.main > h1 {
+    text-align: center;
 }
