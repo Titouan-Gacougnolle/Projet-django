@@ -9,7 +9,7 @@ class Ecurie(models.Model):
     date_creation = models.DateField(blank=True, null=True)
 
     def __str__(self):
-        texte = f"{self.nom}"
+        texte = f"Voici la team {self.nom} de la marque {self.marque} gérée par {self.team_manager}"
         return texte
 
     def dico(self):
@@ -27,7 +27,7 @@ class Pilote(models.Model):
     #ecurie = models.ForeignKey(Ecurie, default=None)
 
     def __str__(self):
-        textepilote = f"{self.prenom} {self.nom}"
+        textepilote = f"Voici le pilote {self.nom} {self.prenom}, pilote officiel de l'équipe {self.ecurie.nom}"
         return textepilote
 
     def dico(self):

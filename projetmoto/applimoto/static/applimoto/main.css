@@ -1,12 +1,12 @@
 body {
     margin: auto;
-    background-color: aliceblue;
+    background-color: aqua;
 }
 
 .entetesite{
     width: 70%;
     margin: auto;
-
+    background-image: url(fabio.jpg);
     height: 200px;
 }
 .entetesite h1 {
@@ -27,9 +27,5 @@ body {
 .main {
     width: 70%;
     margin: auto;
-     background-color: navajowhite;
-}
-
-.main > h1 {
-    text-align: center;
+     background-color: red;
 }
