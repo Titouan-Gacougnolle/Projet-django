@@ -7,15 +7,17 @@
 <h1>Liste des écuries</h1>
 <ol>
     {% for l in liste %}
-    <li>{{l}} <a href="/applimoto/affiche/{{l.id}}">Afficher </a> <a href="/applimoto/update/{{l.id}}">Modifier </a> <a
-            href="/applimoto/delete/{{l.id}}">Supprimer </a></li>
+    <li>{{l}} </li> <a class="btn btn-success" href="/applimoto/affiche/{{l.id}}">Afficher </a>
+        <a class="btn btn-primary" href="/applimoto/update/{{l.id}}">Modifier </a>
+        <a class="btn btn-danger" href="/applimoto/delete/{{l.id}}">Supprimer </a>
     {% endfor %}
 </ol>
 <h1>Liste des pilotes</h1>
 <ol>
     {% for l2 in liste2 %}
-    <li>{{l2}} <a href="/applimoto/affichepilote/{{l2.id}}">Afficher </a> <a href="/applimoto/updatepilote/{{l2.id}}">Modifier </a>
-        <a href="/applimoto/deletepilote/{{l2.id}}">Désinscrire le pilote </a></li>
+    <li>{{l2}} <a class="btn btn-success"href="/applimoto/affichepilote/{{l2.id}}">Afficher </a>
+        <a class="btn btn-primary"href="/applimoto/updatepilote/{{l2.id}}">Modifier </a>
+        <a class="btn btn-danger"href="/applimoto/deletepilote/{{l2.id}}">Désinscrire le pilote </a></li>
     {% endfor %}
 
 </ol>
