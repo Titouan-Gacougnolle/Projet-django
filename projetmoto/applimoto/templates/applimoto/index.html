@@ -1,24 +1,86 @@
 {% extends "applimoto/main.html" %}
 
 {% block title %}
-    Page d'accueil du site
+Page d'accueil du site
 {% endblock %}
 {%block content %}
-<h1>Liste des écuries</h1>
-<ol>
+<h1 class="text-center">Liste des écuries</h1>
+<table class="table text-center ">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Nom de l'écurie</th>
+        <th scope="col">Afficher</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
+    </tr>
+    </thead>
+    <tbody>
     {% for l in liste %}
-    <li>{{l}} </li> <a class="btn btn-success" href="/applimoto/affiche/{{l.id}}">Afficher </a>
-        <a class="btn btn-primary" href="/applimoto/update/{{l.id}}">Modifier </a>
-        <a class="btn btn-danger" href="/applimoto/delete/{{l.id}}">Supprimer </a>
+    <tr>
+        <th scope="row">{{l}}</th>
+        <td><a class="btn btn-success" href="/applimoto/affiche/{{l.id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-file-earmark-spreadsheet" viewBox="0 0 16 16">
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h3v2H6zm4 0v-2h3v1a1 1 0 0 1-1 1h-2zm3-3h-3v-2h3v2zm-7 0v-2h3v2H6z"/>
+            </svg>
+        </a></td>
+        <td><a class="btn btn-primary" href="/applimoto/update/{{l.id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd"
+                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg>
+        </a></td>
+        <td><a class="btn btn-danger" href="/applimoto/delete/{{l.id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill"
+                 viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+            </svg>
+        </a></td>
+    </tr>
     {% endfor %}
-</ol>
-<h1>Liste des pilotes</h1>
-<ol>
-    {% for l2 in liste2 %}
-    <li>{{l2}} <a class="btn btn-success"href="/applimoto/affichepilote/{{l2.id}}">Afficher </a>
-        <a class="btn btn-primary"href="/applimoto/updatepilote/{{l2.id}}">Modifier </a>
-        <a class="btn btn-danger"href="/applimoto/deletepilote/{{l2.id}}">Désinscrire le pilote </a></li>
-    {% endfor %}
+    </tbody>
+</table>
 
-</ol>
+<h1 class="text-center">Liste des pilotes</h1>
+<table class="table text-center">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Nom du Pilote</th>
+        <th scope="col">Afficher</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for l2 in liste2 %}
+    <tr>
+        <th scope="row">{{l2}}</th>
+        <td><a class="btn btn-success" href="/applimoto/affichepilote/{{l2.id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-file-earmark-person" viewBox="0 0 16 16">
+                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+            </svg>
+        </a></td>
+        <td><a class="btn btn-primary" href="/applimoto/updatepilote/{{l2.id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd"
+                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg>
+        </a></td>
+        <td><a class="btn btn-danger" href="/applimoto/deletepilote/{{l2.id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill"
+                 viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+            </svg>
+        </a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}

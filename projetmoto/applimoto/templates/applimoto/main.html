@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{%static 'applimoto/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{%static 'applimoto/css/style.css' %}">
+    <link rel="stylesheet" href="{%static 'applimoto/main.css' %}">
     <title>{% block title %}Mon Projet Django{% endblock %}</title>
 </head>
 <body>
-<header class="entetesite">
-            <h1> Bienvenue sur notre site de gestion officiel du MotoGP</h1>
-            <nav>
-                <a href="http://127.0.0.1:8000/applimoto/index/"> Accueil </a>
-                <a href="/applimoto/ajout">Ajouter une ecurie</a>
-                <a href="/applimoto/inscrire">Inscrire un pilote</a>
-            </nav>
-        </header>
+<nav class="navbar navbar-dark bg-dark">
 
-<div class="main">
-        {% block content %}
-            <h1> bloc de test</h1>
-        {% endblock%}
-        </div>
+    <p class="navbar-brand ">Bienvenue sur notre site de gestion officiel du MotoGP</p>
+
+        <a class="btn btn-primary btn-lg"href="/applimoto/ajout">Ajouter une ecurie</a>
+        <a class="btn btn-primary btn-lg"href="/applimoto/inscrire">Inscrire un pilote</a>
+        <a class="btn btn-primary btn-lg"href="http://127.0.0.1:8000/applimoto/index/"> Accueil </a>
+
+
+</nav>
+<div class="main w-75 m-auto">
+    {% block content %}
+    <h1> bloc de test</h1>
+    {% endblock%}
+</div>
 </body>
 </html>
