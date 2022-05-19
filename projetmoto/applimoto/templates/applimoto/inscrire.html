@@ -4,10 +4,10 @@
 Inscrire
 {% endblock %}
 {%block content %}
-<h1> Inscrire un pilote </h1>
+<h1 class="text-center"> Inscrire un pilote </h1>
 
 {% if id != '' %}
-<form action="/applimoto/updatetraitementpilote/{{id}}/" method="post">
+<form class="text-center" action="/applimoto/updatetraitementpilote/{{id}}/" method="post">
 
     {% else %}
     <form action="/applimoto/affichepilote/" method="post">
@@ -15,8 +15,8 @@ Inscrire
 
         {% csrf_token %}
         {{form.as_ul}}
-        <input type="submit" value="Inscrire"/>
-        <a href="/applimoto/">Index</a>
+        <input class="btn btn-outline-primary"  type="submit" value="Inscrire"/>
+
 
     </form>
     {% endblock %}

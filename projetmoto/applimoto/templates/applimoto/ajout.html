@@ -4,10 +4,10 @@
     Ajouter
 {% endblock %}
 {%block content %}
-<h1>Ajouter des écuries</h1>
+<h1 class="text-center">Ajouter des écuries</h1>
 
 {% if id != '' %}
-<form action="/applimoto/updatetraitement/{{id}}/" method="post">
+<form class="text-center " action="/applimoto/updatetraitement/{{id}}/" method="post">
 
     {% else %}
     <form action="/applimoto/affiche/" method="post">
@@ -15,8 +15,8 @@
 
         {% csrf_token %}
         {{form.as_ul}}
-        <input type="submit" value="Envoyer les informations"/>
-        <a href="/applimoto/">Index</a>
+        <input class="btn btn-outline-primary" type="submit" value="Envoyer les informations"/>
+
 
     </form>
 {% endblock %}
